@@ -53,8 +53,8 @@ export const initialState = {
 
 #### Connect a premade action.
 > *Now that we can see our state, let's change allow the user to change it. Let's start with a simple premade action...adding one to our total.*
-* [ ] Note the `ADD_ONE` action case (in ./reducer/index.js) and `addOne` action creator (in ./actions/index.js). This action adds 1 to our total.
-* [ ] Import the `addOne` action creator into App.js.
+* [x] Note the `ADD_ONE` action case (in ./reducer/index.js) and `addOne` action creator (in ./actions/index.js). This action adds 1 to our total.
+* [x] Import the `addOne` action creator into App.js.
 * [ ] Within `App.js`, create an event handler connected to the 1 button's `onClick` method.
 * [ ] Within your event handler, dispatch the `addOne` action creator.
 * [ ] **Test** that your event is correctly connected by pushing the 1 button in the browser. Your total should increase by 1.
@@ -63,7 +63,7 @@ export const initialState = {
 
 #### Connect a better premade action.
 > *Adding indivisual actions for every number would be tedious. Let's add in an action that can work for ALL numerical input*
-* [ ] Note the `APPLY_NUMBER` action case (in ./reducer/index.js) and `applyNumber` action creator (in ./actions/index.js). This action adds, multiplies or subtracts a number passed into the action creator.
+* [] Note the `APPLY_NUMBER` action case (in ./reducer/index.js) and `applyNumber` action creator (in ./actions/index.js). This action adds, multiplies or subtracts a number passed into the action creator.
 * [ ] Import the `applyNumber` action creator into `App.js.`
 * [ ] Remove or comment out the `addOne` event handler from the 1 button.
 * [ ] Create an eventhandler that takes in a number as an argument and dispatches `applyNumber` with it.
