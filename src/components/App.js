@@ -1,6 +1,12 @@
 import React, { useReducer } from 'react';
 import reducer, { initialState } from '../reducers';
-import { applyNumber, changeOperation, clearDisplay } from '../actions';
+import { applyNumber, 
+         changeOperation, 
+         clearDisplay, 
+         currentMemoryValue,
+         addCurrentMemoryValue,
+         clearCurrentMemoryValue } 
+         from '../actions';
 
 import './App.css';
 
@@ -23,6 +29,16 @@ function App() {
   const clearDisplayClick = () => {
     dispatch(clearDisplay())
   }
+  const currentMemoryValueClick = () => {
+    dispatch(currentMemoryValue());
+  }
+  const addCurrentMemoryValueClick = () => {
+    dispatch(addCurrentMemoryValue());
+  }
+  const clearCurrentMemoryValueClick =() => {
+    dispatch(clearCurrentMemoryValue());
+  }
+
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
@@ -35,14 +51,14 @@ function App() {
             
             <TotalDisplay value={state.total}/>
             <div className="row details">
-              <span id="operation"><b>Operation:</b> {state.operation}</span>
-              <span id="memory"><b>Memory:</b>{state.memory}</span>
+              <span id="operation"><b>Operation: </b> {state.operation}</span>
+              <span id="memory"><b>Memory: </b>{state.memory}</span>
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"}/>
-              <CalcButton value={"MR"}/>
-              <CalcButton value={"MC"}/>
+              <CalcButton value={"M+"} onClick={currentMemoryValueClick}/>
+              <CalcButton value={"MR"} onClick={addCurrentMemoryValueClick}/>
+              <CalcButton value={"MC"} onClick={clearCurrentMemoryValueClick}/>
             </div>
 
             <div className="row">
@@ -64,9 +80,9 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={"+"} onClick={() => handleOperationClick('+')}/>
-              <CalcButton value={"*"} onClick={() => handleOperationClick('*')}/>
-              <CalcButton value={"-"} onClick={() => handleOperationClick('-')}/>
+              <CalcButton value={"+"} onClick={() => handleOperationClick("+")}/>
+              <CalcButton value={"*"} onClick={() => handleOperationClick("*")}/>
+              <CalcButton value={"-"} onClick={() => handleOperationClick("-")}/>
             </div>
 
             <div className="row ce_button">
