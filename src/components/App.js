@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 import reducer, { initialState } from '../reducers';
-import { applyNumber, addOne, changeOperation } from '../actions';
+import { applyNumber, changeOperation, clearDisplay } from '../actions';
 
 import './App.css';
 
@@ -20,7 +20,9 @@ function App() {
   const handleOperationClick = (operator) => {
     dispatch(changeOperation(operator))
   }
-
+  const clearDisplayClick = () => {
+    dispatch(clearDisplay())
+  }
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
@@ -68,7 +70,7 @@ function App() {
             </div>
 
             <div className="row ce_button">
-              <CalcButton value={"CE"}/>
+              <CalcButton value={"CE"} onClick={clearDisplayClick}/>
             </div>
 
           </form>
