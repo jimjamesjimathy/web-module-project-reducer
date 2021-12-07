@@ -102,7 +102,7 @@ export const initialState = {
 
 
 ### Submission Format
-- [ ] If this is your first time connecting a submission, authorize your github account within the codegrade assignment.
-- [ ] Connect your fork to Codegrade using the "Connect Git" button.
-- [ ] Find your newly created fork from the list and push your work to main.
-- [ ] Check this video for details: www.youtube.com/watch?v=fC2BO7dI6IQ
+- [x] If this is your first time connecting a submission, authorize your github account within the codegrade assignment.
+- [x] Connect your fork to Codegrade using the "Connect Git" button.
+- [x] Find your newly created fork from the list and push your work to main.
+- [x] Check this video for details: www.youtube.com/watch?v=fC2BO7dI6IQ
